@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calculator-component',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator-component.component.css']
 })
 export class CalculatorComponentComponent implements OnInit {
+  operation = "";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  addNumber(value: string): void {
+    this.operation += value;
+  }
 }
