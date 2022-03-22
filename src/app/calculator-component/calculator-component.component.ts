@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CalculatorComponentComponent implements OnInit {
   operation = "";
+  result: string | undefined = undefined;
 
   constructor() { }
 
@@ -15,5 +16,9 @@ export class CalculatorComponentComponent implements OnInit {
 
   addNumber(value: string): void {
     this.operation += value;
+  }
+  
+  calcOperation(): void {
+    this.result = eval(this.operation);
   }
 }

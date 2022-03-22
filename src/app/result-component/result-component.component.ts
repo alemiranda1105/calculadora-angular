@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ResultComponentComponent implements OnInit {
   @Input() operation: string | undefined;
+  @Input() result: string | undefined;
 
   constructor() { }
 

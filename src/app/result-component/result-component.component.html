@@ -1,3 +1,4 @@
 <div class="result-container">
-    <p>{{ operation }}</p>
+    <p *ngIf="!result">{{ operation }}</p>
+    <p class="result-text" *ngIf="{result}">{{ result }}</p>
 </div>

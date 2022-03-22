@@ -1,9 +1,9 @@
 <div class="calculator-container">
-    <app-result-component [operation]="operation"></app-result-component>
-    <span class="operation">/</span>
-    <span class="operation">X</span>
-    <span class="operation">-</span>
-    <span class="operation">+</span>
+    <app-result-component [operation]="operation" [result]="result"></app-result-component>
+    <span class="operation" (click)="addNumber('/')">/</span>
+    <span class="operation" (click)="addNumber('x')">X</span>
+    <span class="operation" (click)="addNumber('-')">-</span>
+    <span class="operation" (click)="addNumber('+')">+</span>
     <span class="number" (click)="addNumber('7')">7</span>
     <span class="number" (click)="addNumber('8')" >8</span>
     <span class="number" (click)="addNumber('9')">9</span>
@@ -14,4 +14,4 @@
     <span class="number" (click)="addNumber('2')">2</span>
     <span class="number" (click)="addNumber('3')">3</span>
     <span class="zero" (click)="addNumber('0')">0</span>
-    <span class="equal">=</span>
+    <span class="equal" (click)="calcOperation()">=</span>
