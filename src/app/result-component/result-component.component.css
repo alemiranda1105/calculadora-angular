@@ -1,0 +1,13 @@
+
+.result-container {
+    margin: 0;
+    height: 100px;
+    width: 400px;
+    background-color: #000;
+    color: white;
+}
+
+.result-container p {
+    margin: 0;
+    padding: 0;
+}
