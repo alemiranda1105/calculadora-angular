@@ -1,19 +1,32 @@
 <div class="calculator-container">
-    <app-result-component class="result" [operation]="operation" [result]="result"></app-result-component>
-    <div class="key toZero" (click)="toZero()">AC</div>
-    <div class="key operation" (click)="addNumber('/')">/</div>
-    <div class="key number" (click)="addNumber('7')">7</div>
-    <div class="key number" (click)="addNumber('8')" >8</div>
-    <div class="key number" (click)="addNumber('9')">9</div>
-    <div class="key operation" (click)="addNumber('x')">X</div>
-    <div class="key number" (click)="addNumber('4')">4</div>
-    <div class="key number" (click)="addNumber('5')">5</div>
-    <div class="key number" (click)="addNumber('6')">6</div>
-    <div class="key operation" (click)="addNumber('-')">-</div>
-    <div class="key number" (click)="addNumber('1')">1</div>
-    <div class="key number" (click)="addNumber('2')">2</div>
-    <div class="key number" (click)="addNumber('3')">3</div>
-    <div class="key operation" (click)="addNumber('+')">+</div>
-    <div class="key zero" (click)="addNumber('0')">0</div>
-    <div class="key equal" (click)="calcOperation()">=</div>
+    <app-result-component operation="{{operation}}" result="{{result}}"></app-result-component>
+    <table>
+        <tr>
+            <td class="top" colspan="3" (click)="toZero()">AC</td>
+            <td class="operation" (click)="addNumber('/')">/</td>
+        </tr>
+        <tr>
+            <td class="number" (click)="addNumber('7')">7</td>
+            <td class="number" (click)="addNumber('8')" >8</td>
+            <td class="number" (click)="addNumber('9')">9</td>
+            <td class="operation" (click)="addNumber('*')">X</td>
+        </tr>
+        <tr>
+            <td class="number" (click)="addNumber('4')">4</td>
+            <td class="number" (click)="addNumber('5')">5</td>
+            <td class="number" (click)="addNumber('6')">6</td>
+            <td class="operation" (click)="addNumber('-')">-</td>
+        </tr>
+        <tr>
+            <td class="number" (click)="addNumber('1')">1</td>
+            <td class="number" (click)="addNumber('2')">2</td>
+            <td class="number" (click)="addNumber('3')">3</td>
+            <td class="operation" (click)="addNumber('+')">+</td>
+        </tr>
+        <tr>
+            <td class="number" colspan="2" (click)="addNumber('0')">0</td>
+            <td class="number" (click)="addNumber('.')">,</td>
+            <td class="operation" (click)="calcOperation()">=</td>
+        </tr>
+    </table>
 </div>

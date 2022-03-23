@@ -1,79 +1,44 @@
-.calculator-container {
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    max-width: fit-content;
-    padding: 10px;
-    border-radius: 10px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px; 
-    grid-template-areas: 
-      "result result result result"
-      "toZero toZero toZero ."
-      ". . . ."
-      ". . . ."
-      ". . . ."
-      "zero equal equal equal";
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-}
 
-.key {
+.calculator-container {
+    background-color: #1C1C1C;
+    color: white;
+    text-align: center;
     border-radius: 10px;
-    width: 20vw;
-    height: 20vw;
-    max-width: 100px;
-    max-height: 100px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.number {
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    background-color: #ccc;
+table {
+    border-spacing: 20px;
+    background-color: #1C1C1C;
+    border-radius: 10px;
 }
 
-.zero {
-    grid-area: zero;
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    background-color: #ccc;
+td {
+    font-weight: 600;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
 }
 
 .operation {
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgb(255, 173, 96);
+    background-color: #FF9500;
 }
 
-.equal {
-    width: 70vw;
-    max-width: 430px;
-    grid-area: equal;
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgb(255, 173, 96);
+.top {
+    background-color: #D4D4D2;
+    color: black;
 }
 
-.toZero {
-    width: 70vw;
-    max-width: 430px;
-    grid-area: toZero;
-    box-sizing: border-box;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgb(255, 173, 96);
+.number {
+    background-color: #505050;
 }
 
-.result { 
-    grid-area: result; 
+@media (max-width: 599px) {
+    .calculator-container {
+        width: 100vw;
+    }
 }
