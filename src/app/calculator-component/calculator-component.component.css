@@ -1,57 +1,79 @@
 .calculator-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 400px;
-    height: fit-content;
     background-color: black;
-    box-shadow: 0px 3px 10px 3px #aaa;
-    border-right: 0.01em solid #333;
-    border-bottom: 0.01em solid #333;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px; 
+    grid-template-areas: 
+      "result result result result"
+      "toZero toZero toZero ."
+      ". . . ."
+      ". . . ."
+      ". . . ."
+      "zero equal equal equal";
+    justify-items: center;
     align-content: center;
+    align-items: center;
+}
+
+.key {
+    border-radius: 10px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 100px;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .number {
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    width: 100px;
-    height: 100px;
     background-color: #ccc;
-    border: 0.01em solid black;
-    margin: 10px;
 }
 
 .zero {
+    grid-area: zero;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    width: 300px;
-    height: 100px;
     background-color: #ccc;
-    border-top: 0.01em solid #333;
-    border-left: 0.01em solid #333;
 }
 
 .operation {
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    width: 100px;
-    height: 100px;
     background-color: rgb(255, 173, 96);
-    border: 0.01em solid black;
 }
 
 .equal {
+    width: 70vw;
+    max-width: 430px;
+    grid-area: equal;
     box-sizing: border-box;
     text-align: center;
     cursor: pointer;
-    width: 400px;
-    height: 100px;
     background-color: rgb(255, 173, 96);
-    border: 0.01em solid black;
+}
+
+.toZero {
+    width: 70vw;
+    max-width: 430px;
+    grid-area: toZero;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(255, 173, 96);
+}
+
+.result { 
+    grid-area: result; 
 }
