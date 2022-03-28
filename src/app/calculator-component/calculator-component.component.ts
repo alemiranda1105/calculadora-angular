@@ -19,7 +19,11 @@ export class CalculatorComponentComponent implements OnInit {
   }
   
   calcOperation(): void {
-    this.result = eval(this.operation);
+    try {
+      this.result = eval(this.operation);
+    } catch (error) {
+      this.result = "ERROR";
+    }
   }
 
   toZero(): void {

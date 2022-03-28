@@ -28,6 +28,10 @@ td {
     background-color: #FF9500;
 }
 
+.operation:active {
+    background-color: #D4D4D2;
+}
+
 .top {
     background-color: #D4D4D2;
     color: black;
@@ -35,6 +39,10 @@ td {
 
 .number {
     background-color: #505050;
+}
+
+.top:active, .number:active {
+    background-color: #FF9500;
 }
 
 @media (max-width: 599px) {
